@@ -1,0 +1,300 @@
+/*General Styles*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	font-family: "Uchen", sans-serif;
+	color: #555;
+}
+
+ul,
+nav {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	opacity: 0.75;
+	color: #fff;
+}
+
+a.btn {
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	background-color: #f5be09;
+	opacity: 1;
+	transition: all 400ms;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 80px;
+}
+
+/*Dari CSS trik untuk bikin warna antar section beda2 gitu)*/
+section:not(.hero):nth-child(even) {
+	background-color: #f5f5f5;
+}
+
+.grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+hr {
+	width: 300px;
+	height: 8px;
+	background-color: #09005e;
+	margin-bottom: 50px;
+}
+
+.image-1 {
+	background-image: url("../img/1488197647851.jpg");
+}
+
+.image-2 {
+	background-image: url("../img/IMG-20191128-WA0010.jpg");
+}
+
+.image-3 {
+	background-image: url("../img/IMG_20210315_233359.jpg");
+}
+
+.image-4 {
+	background-image: url("../img/IMG_2995-01.jpeg");
+}
+
+section h3.title {
+	text-transform: capitalize;
+	font: bold 48px "Uchen", sans-serif;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+section p {
+	max-width: 775px;
+	line-height: 2;
+	padding: 0 20px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+/*Header Styles*/
+
+header {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 100px 0;
+	animation: 1s fadein 0.5s forwards;
+	opacity: 0;
+	color: rgb(10, 10, 10);
+	z-index: 2;
+}
+
+/* Untuk Animasi */
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+
+header h2 {
+	font-family: "Uchen", sans-serif;
+}
+
+header nav {
+	display: flex;
+	margin-right: -15px;
+}
+
+header nav li {
+	margin: 0 15px;
+}
+
+/*Jumbotron*/
+
+.hero {
+	position: relative;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	color: #fff;
+}
+
+.hero .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/4929669.jpg");
+	background-size: cover;
+	z-index: -1;
+	background-color: #fff01c;
+}
+
+.hero h1 {
+	font: 72px "Uchen", sans-serif;
+	text-shadow: 2px 2px rgb(19, 0, 126);
+	margin-bottom: 15px;
+}
+
+.hero h3 {
+	font: 28px "Uchen", sans-serif;
+	font-weight: 300;
+	text-shadow: 2px 2px rgba(16, 0, 85, 0.973);
+	margin-bottom: 40px;
+}
+
+.hero a.btn {
+	padding: 20px 46px;
+}
+
+.hero-content-area {
+	opacity: 0;
+	margin-top: 100px;
+	animation: 1s slidefade 1s forwards;
+}
+
+/*Untuk Animasi*/
+@keyframes slidefade {
+	100% {
+		opacity: 1;
+		margin: 0;
+	}
+}
+
+/*aboutme Section*/
+
+.aboutme .grid li {
+	height: 350px;
+	padding: 20px;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+}
+
+.aboutme .grid li.small {
+	flex-basis: 30%;
+}
+
+.aboutme .grid li.large {
+	flex-basis: 70%;
+}
+
+@media (max-width: 1100px) {
+	.aboutme .grid li.small,
+	.aboutme .grid li.large {
+		flex-basis: 50%;
+	}
+}
+
+/*introduction Section*/
+
+.introduction .grid li {
+	padding: 50px;
+	flex-basis: 50%;
+	text-align: center;
+}
+
+.introduction .grid li i {
+	color: #26008f;
+}
+
+.introduction .grid li h4 {
+	font-size: 30px;
+	margin: 25px 0;
+}
+
+/*unikstorys Section*/
+
+.unikstorys .quote {
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.5;
+	margin: 40px 0 25px;
+}
+
+/*Contact Section*/
+
+.contact form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 60%;
+}
+
+.contact form .btn {
+	padding: 18px 42px;
+}
+
+.contact form input {
+	padding: 15px;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+	flex: 1;
+}
+
+@media (max-width: 1000px) {
+	.contact form input {
+		flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+}
+
+/*Footer Section*/
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #555;
+	color: #fff;
+	padding: 20px 0;
+}
+
+footer ul {
+	display: flex;
+}
+
+footer ul li {
+	margin-left: 16px;
+}
+
+footer p {
+	text-transform: uppercase;
+	font-size: 14px;
+	opacity: 0.6;
+	align-self: center;
+}
+
+@media (max-width: 1100px) {
+	footer {
+		flex-direction: column;
+	}
+
+	footer p {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	footer ul li {
+		margin: 0 8px;
+	}
+}
