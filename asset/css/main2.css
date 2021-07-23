@@ -33,6 +33,13 @@ a.btn {
 	transition: all 400ms;
 }
 
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 80px;
+}
+
 section {
 	display: flex;
 	flex-direction: column;
