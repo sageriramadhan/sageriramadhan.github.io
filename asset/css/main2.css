@@ -16,6 +16,9 @@ easteregg {
 	color : yellow;
 	
 }
+.border{
+	background-color = #1359ad;
+}
 
 ul,
 nav {
